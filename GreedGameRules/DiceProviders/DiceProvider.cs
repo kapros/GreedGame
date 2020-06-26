@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GreedGameRules.DiceProviders
+﻿namespace GreedGameRules.DiceProviders
 {
     public class DiceProvider : IDiceProvider
     {

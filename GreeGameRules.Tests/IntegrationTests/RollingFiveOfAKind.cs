@@ -10,7 +10,7 @@ namespace GreeGameRules.Tests.IntegrationTests
     {
         private readonly IDiceProvider _diceProvider;
 
-        private readonly DieRoll[] _dice = new DieRoll[] { DieRoll.Five, DieRoll.Five, DieRoll.Five, DieRoll.Five, DieRoll.Five};
+        private readonly DieRoll[] _dice = new DieRoll[] { DieRoll.Five, DieRoll.Five, DieRoll.Five, DieRoll.Five, DieRoll.Five };
 
         public RollingFiveOfAKind()
         {

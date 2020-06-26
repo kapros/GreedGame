@@ -1,7 +1,4 @@
 ﻿using GreedGameRules;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GreeGameRules.Tests.CommonData
 {

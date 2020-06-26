@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GreedGameRules.Tests.CommonData
+﻿namespace GreedGameRules.Tests.CommonData
 {
     public class TwoPairsTestsPositive
     {

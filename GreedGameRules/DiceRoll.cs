@@ -61,8 +61,8 @@ namespace GreedGameRules
 
         }
 
-        internal DiceRoll(DiceRoll? diceRoll, DieRoll? newDie, int? index, DieRoll[] rolls = null) : 
-            this(diceRoll, (newDie.HasValue && index.HasValue) ? new KeyValuePair<DieRoll, int>[] { new KeyValuePair<DieRoll, int>(newDie.Value, index.Value)} : new KeyValuePair<DieRoll, int>[0], rolls)
+        internal DiceRoll(DiceRoll? diceRoll, DieRoll? newDie, int? index, DieRoll[] rolls = null) :
+            this(diceRoll, (newDie.HasValue && index.HasValue) ? new KeyValuePair<DieRoll, int>[] { new KeyValuePair<DieRoll, int>(newDie.Value, index.Value) } : new KeyValuePair<DieRoll, int>[0], rolls)
         {
 
         }
@@ -109,7 +109,7 @@ namespace GreedGameRules
             return base.GetHashCode() + 2137;
         }
 
-        public static bool operator == (DiceRoll left, DiceRoll right)
+        public static bool operator ==(DiceRoll left, DiceRoll right)
         {
             return left.AllDice == right.AllDice;
         }

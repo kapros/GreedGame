@@ -1,6 +1,4 @@
-﻿using GreedGameRules.DiceRollGenerators;
-
-namespace GreedGameRules
+﻿namespace GreedGameRules
 {
 
 }

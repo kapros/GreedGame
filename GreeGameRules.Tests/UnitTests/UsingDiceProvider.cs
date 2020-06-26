@@ -1,9 +1,9 @@
 ﻿using GreedGameRules;
 using GreedGameRules.DiceProviders;
-using Xunit;
-using System.Linq;
-using System.Collections.Generic;
 using GreedGameRules.DiceRollGenerators;
+using System.Collections.Generic;
+using System.Linq;
+using Xunit;
 
 namespace GreeGameRules.Tests.UnitTests
 {
@@ -24,7 +24,7 @@ namespace GreeGameRules.Tests.UnitTests
                 listOfRolls.Add(diceGen.Roll().AllDice.ToIntArray());
             }
 
-            Assert.True(listOfRolls.All(x => x.All(y => y >= _min && y <= _max )));
+            Assert.True(listOfRolls.All(x => x.All(y => y >= _min && y <= _max)));
         }
 
     }

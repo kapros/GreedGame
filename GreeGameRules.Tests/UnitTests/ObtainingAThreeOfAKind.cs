@@ -1,10 +1,7 @@
 ﻿using GreedGameRules.DiceProviders;
-using GreedGameRules.DiceRollGenerators;
-using GreedGameRules.Tests.CommonData;
 using GreedGameRules.Rules;
-using System;
+using GreedGameRules.Tests.CommonData;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace GreedGameRules.Tests.UnitTests

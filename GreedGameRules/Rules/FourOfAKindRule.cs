@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 
 namespace GreedGameRules.Rules
 {
@@ -11,7 +8,7 @@ namespace GreedGameRules.Rules
 
         public DieRollResult CountPoints(DiceRoll diceRoll)
         {
-            if(IsApplicable(diceRoll))
+            if (IsApplicable(diceRoll))
                 return new DieRollResult(DiceCombination.FourOfAKind, _points);
             else
                 return DieRollResult.Default();

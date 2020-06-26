@@ -34,7 +34,7 @@ namespace GreedGameRules.DiceRollGenerators
 
         public DiceRoll RerollDiceThree(DiceRoll diceRoll)
         {
-            var newThird= _diceProvider.RollDiceThree();
+            var newThird = _diceProvider.RollDiceThree();
             return new DiceRoll(new DieRoll[] { diceRoll.DiceOne, diceRoll.DiceTwo, newThird, diceRoll.DiceFour, diceRoll.DiceFive });
         }
 
@@ -58,7 +58,7 @@ namespace GreedGameRules.DiceRollGenerators
             }
             return new DiceRoll(current);
         }
-        
+
         public DiceRoll Roll()
         {
             DieRoll[] roll = _diceProvider.RollAllFiveDice();

@@ -11,7 +11,7 @@ namespace GreedGameRules.Tests.IntegrationTests
         [Fact]
         public void OccursWhenRollingTwoOnes()
         {
-    
+
             IDiceProvider diceProvider = new MockDiceProvider(_pairOfOnes);
             IDiceGenerator diceGen = new DiceRollGenerator(diceProvider);
             RulesProcessor rules = new RulesProcessor(diceProvider);

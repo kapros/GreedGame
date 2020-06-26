@@ -19,7 +19,7 @@ namespace GreedGameRules.DiceProviders
         {
             if (repetitions < 1)
                 throw new ArgumentException("Idiot, you can't have something repeated {0} times", repetitions.ToString());
-          
+
             if (repetitions > maxDice)
                 repetitions = maxDice;
             DieRoll[] rollSet = new DieRoll[5];
