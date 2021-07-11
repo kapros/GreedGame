@@ -15,5 +15,11 @@ namespace Dice
 
         public override bool Equals(object obj)
             => obj is RegularDice other && other.Value.Equals(Value);
+
+        public override int GetHashCode()
+            => HashCode.Combine((int)Value, ToString());
+
+        public override string ToString()
+            => Value.ToString();
     }
 }
