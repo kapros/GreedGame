@@ -5,4 +5,8 @@
     <Langversion>9</Langversion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DiceProviders\" />
+  </ItemGroup>
+
 </Project>

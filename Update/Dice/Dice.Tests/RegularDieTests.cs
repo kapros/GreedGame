@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Dice.Tests
 {
-    public class RegularDiceTests
+    public class RegularDieTests
     {
         [Fact]
         public void Min_value_is_1()
