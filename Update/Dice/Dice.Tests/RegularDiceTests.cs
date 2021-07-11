@@ -11,7 +11,7 @@ namespace Dice.Tests
     public class RegularDiceTests
     {
         [Fact]
-        public void Regular_dice_min_value_is_1()
+        public void Min_value_is_1()
         {
             const int minValue = 1;
 
@@ -21,13 +21,23 @@ namespace Dice.Tests
         }
 
         [Fact]
-        public void Regular_dice_max_value_is_6()
+        public void Max_value_is_6()
         {
             const int maxValue = 6;
 
             var dice = new RegularDice();
 
             dice.MaxValue.Should().Be(maxValue);
+        }
+
+        [Fact]
+        public void Actual_value_returned()
+        {
+            const int value = 4;
+
+            var dice = new RegularDice(RegularDiceResult.Four);
+
+            dice.Value.Should().Be(value);
         }
     }
 }
