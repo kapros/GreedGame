@@ -29,5 +29,13 @@ namespace Dice.Tests
             var dice = provider.RollDice(1);
             dice.First().Should().BeOfType(typeof(RegularDie));
         }
+
+        [Fact]
+        public void Should_return_different_results()
+        {
+            var provider = new RegularDiceProvider();
+            var dice = provider.RollDice(6);
+            dice.Distinct().Should().HaveCountGreaterOrEqualTo(2);
+        }
     }
 }
