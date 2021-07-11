@@ -12,5 +12,8 @@ namespace Dice
         { }
 
         public static RegularDice FromDiceRoll(RegularDiceResult result) => new(result);
+
+        public override bool Equals(object obj)
+            => obj is RegularDice other && other.Value.Equals(Value);
     }
 }
