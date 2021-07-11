@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dice
 {
-    public abstract class Dice<T>
+    public abstract class Dice<T> : IDice<T>
     {
         private Dice() { }
 
