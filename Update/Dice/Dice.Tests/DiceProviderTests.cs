@@ -1,4 +1,5 @@
 ﻿using Dice.DiceProviders;
+using Dice.DiceTypes;
 using FluentAssertions;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,14 @@ namespace Dice.Tests
             var provider = new RegularDiceProvider();
             var dice = provider.RollDice(diceToReturn);
             dice.Should().HaveCount(diceToReturn);
+        }
+
+        [Fact]
+        public void Should_return_correct_type_of_die()
+        {
+            var provider = new RegularDiceProvider();
+            var dice = provider.RollDice(1);
+            dice.First().Should().BeOfType(typeof(RegularDie));
         }
     }
 }
