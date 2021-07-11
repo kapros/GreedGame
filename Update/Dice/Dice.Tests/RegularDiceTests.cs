@@ -71,6 +71,13 @@ namespace Dice.Tests
             dice.GetHashCode().Should().Be(other.GetHashCode());
         }
 
+        [Fact]
+        public void Has_same_hash_code_for_different_value_objects()
+        {
+            var dice = RegularDice.FromDiceRoll(RegularDiceResult.Four);
+            var other = RegularDice.FromDiceRoll(RegularDiceResult.One);
 
+            dice.GetHashCode().Should().NotBe(other.GetHashCode());
+        }
     }
 }
