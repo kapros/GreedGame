@@ -12,16 +12,15 @@ namespace Dice
         {
         }
 
-        public RegularDice(RegularDiceResult four)
+        public RegularDice(RegularDiceResult result)
         {
-            Four = four;
+            Value = result;
         }
 
         public int MaxValue => 6;
 
         public int MinValue => 1;
 
-        public RegularDiceResult Four { get; }
-        public object Value { get; set; }
+        public RegularDiceResult Value { get; }
     }
 }

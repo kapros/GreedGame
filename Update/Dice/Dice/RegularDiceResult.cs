@@ -8,6 +8,6 @@ namespace Dice
 {
     public enum RegularDiceResult
     {
-        Four
+        Four = 4
     }
 }
