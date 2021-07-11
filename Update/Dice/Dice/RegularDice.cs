@@ -8,6 +8,6 @@ namespace Dice
 {
     public class RegularDice
     {
-        public object MaxValue { get; set; }
+        public int MaxValue => 6;
     }
 }
