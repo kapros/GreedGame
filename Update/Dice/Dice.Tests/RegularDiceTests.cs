@@ -37,5 +37,16 @@ namespace Dice.Tests
 
             dice.Value.Should().Be(value);
         }
+
+        [Fact]
+        public void Is_not_equal_to_another_regular_die_with_different_value()
+        {
+            const RegularDiceResult value = RegularDiceResult.Four;
+
+            var dice = RegularDice.FromDiceRoll(value);
+            var other = RegularDice.FromDiceRoll(RegularDiceResult.Three);
+
+            dice.Equals(other).Should().BeFalse();
+        }
     }
 }
