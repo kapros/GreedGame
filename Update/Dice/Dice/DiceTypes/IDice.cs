@@ -1,4 +1,4 @@
-﻿namespace Dice
+﻿namespace Dice.DiceTypes
 {
     public interface IDice<T>
     {
