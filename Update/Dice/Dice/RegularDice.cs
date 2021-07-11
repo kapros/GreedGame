@@ -9,5 +9,7 @@ namespace Dice
     public class RegularDice
     {
         public int MaxValue => 6;
+
+        public object MinValue { get; set; }
     }
 }
