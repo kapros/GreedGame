@@ -33,7 +33,7 @@ namespace Dice.Tests
         {
             const int value = 4;
 
-            var dice = new RegularDice(RegularDiceResult.Four);
+            var dice = RegularDice.FromDiceRoll(RegularDiceResult.Four);
 
             dice.Value.Should().Be(value);
         }
