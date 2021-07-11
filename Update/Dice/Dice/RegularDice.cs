@@ -8,7 +8,7 @@ namespace Dice
 {
     public class RegularDice
     {
-        public RegularDice()
+        private RegularDice()
         {
         }
 
@@ -16,10 +16,6 @@ namespace Dice
         {
             Value = result;
         }
-
-        public int MaxValue => 6;
-
-        public int MinValue => 1;
 
         public RegularDiceResult Value { get; }
     }

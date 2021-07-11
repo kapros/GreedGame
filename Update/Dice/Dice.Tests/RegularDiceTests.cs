@@ -14,10 +14,8 @@ namespace Dice.Tests
         public void Min_value_is_1()
         {
             const int minValue = 1;
-
-            var dice = new RegularDice();
-
-            dice.MinValue.Should().Be(minValue);
+            var minEnumValue = Enum.GetValues(typeof(RegularDiceResult)).Cast<RegularDiceResult>().Min();
+            minEnumValue.Should().Be(minValue);
         }
 
         [Fact]
@@ -25,9 +23,9 @@ namespace Dice.Tests
         {
             const int maxValue = 6;
 
-            var dice = new RegularDice();
+            var maxEnumValue = Enum.GetValues(typeof(RegularDiceResult)).Cast<RegularDiceResult>().Max();
 
-            dice.MaxValue.Should().Be(maxValue);
+            maxEnumValue.Should().Be(maxValue);
         }
 
         [Fact]
