@@ -13,6 +13,12 @@ The DiceRollResult should receive some better treatment tho...
 Overall, with the knowledge I've gained over the years, I wouldn't be surprised if this turns into microservices and some DDD elements are applied :D
 
 Rules:
-https://howdoyouplayit.com/greed-rules-instructions-directions-for-the-greed-dice-game/
+https://nairapreneurs.com/greed-dice-game-rules/
 
-Looking at the full set of rules (previously, I only implemented some rules, mostly for the rules engine), this is going to take a bit more time, looking forward to it.
+I have also found sets of rules that involved using dice that would spell $GREED instead of standard dice, but I did not look into those in depth. However I will consider the dice class to be a bit more generic to be able to accomodate these rules.
+Another set of rules I found would use 10 dice instead of 6 and offer a slight variation as well.
+Looking at the full set of rules (previously, I only implemented some rules, mostly for the rules engine), this is going to take a bit more time, looking forward to it. Also, considering the variations I have found, this make the potential grow even more.
+
+Alternative sets of rules to consider:
+https://ourpastimes.com/rules-greed-dice-game-5464957.html
+https://groupgames101.com/greed-dice-game-rules/
