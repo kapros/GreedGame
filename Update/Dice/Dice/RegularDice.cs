@@ -6,17 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dice
 {
-    public class RegularDice
+    public class RegularDice : Dice<RegularDiceResult>
     {
-        private RegularDice()
-        {
-        }
+        public RegularDice(RegularDiceResult result) : base(result)
+        { }
 
-        public RegularDice(RegularDiceResult result)
-        {
-            Value = result;
-        }
-
-        public RegularDiceResult Value { get; }
+        public static RegularDice FromDiceRoll(RegularDiceResult result) => new(result);
     }
 }
