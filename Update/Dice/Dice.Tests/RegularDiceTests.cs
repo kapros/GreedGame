@@ -59,5 +59,13 @@ namespace Dice.Tests
 
             dice.Equals(other).Should().BeTrue();
         }
+
+        [Fact]
+        public void Is_not_equal_to_objects_that_are_not_same_type()
+        {
+            var dice = RegularDice.FromDiceRoll(RegularDiceResult.Four);
+
+            dice.Equals(new object()).Should().BeFalse();
+        }
     }
 }
