@@ -79,5 +79,13 @@ namespace Dice.Tests
 
             dice.GetHashCode().Should().NotBe(other.GetHashCode());
         }
+
+        [Fact]
+        public void Should_return_name_of_die_side()
+        {
+            var dice = RegularDice.FromDiceRoll(RegularDiceResult.Four);
+
+            dice.ToString().Should().Be(RegularDiceResult.Four.ToString());
+        }
     }
 }
