@@ -61,11 +61,16 @@ namespace Dice.Tests
         }
 
         [Fact]
-        public void Is_not_equal_to_objects_that_are_not_same_type()
+        public void Has_same_hash_code_for_same_value_objects()
         {
-            var dice = RegularDice.FromDiceRoll(RegularDiceResult.Four);
+            const RegularDiceResult value = RegularDiceResult.Four;
 
-            dice.Equals(new object()).Should().BeFalse();
+            var dice = RegularDice.FromDiceRoll(value);
+            var other = RegularDice.FromDiceRoll(value);
+
+            dice.GetHashCode().Should().Be(other.GetHashCode());
         }
+
+
     }
 }
