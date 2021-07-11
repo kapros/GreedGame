@@ -1,0 +1,18 @@
+FakeDicreRollFactory.GetSetOfRolls < after this time I wasn't able to make out what the method is supposed to be used for originally, especially the integer, a named tuple would have been more helpful.
+as an avid fan of using var, the first thing would be to use var instead where applicable, or use new() in .NET 5 instead
+definitely need to review the rules of the game to be able to recreate it. From the existing code, I am not sure all ruels are very clear.
+A LOT of unit tests, which is probably going to be a good thing for some, but that was definitely less TDD, with the rewrite I am definitely going to aim to drive via tests, maybe add some BDD specs.
+Technically, the project was built around the rules engine design pattern. While simple, I appreciate its implementation here, hopefully I can still improve upon it.
+The extensions are quite okay, going to resue then.
+DisplayAttribute was not ideal, technically ToString() was fine enough, but I don't believe that was the optimal usage.
+Maybe the MockDiceProvider can be improved. On the one hand, I could use a mock library for unit testing, but on the other hand, in a realistic scenario, I can imagine a situation where the implemented one could be used for testing above unit tests (maybe if this was powering a web app and all, or as part of a bigger system, etc).
+Some classes definitely need to have an interface behind them, even if I wouldn't see myself implementing mocks (at least not until the project becomes bigger)
+Some classes like the Game class shouldn't even be here. Technically, I think I could also break up the dice from the rules processor itself into separate libraries.
+I appreciate the DiceRoll class aggregating the rools and applying them individual slots. I think I'll expand it still. I like the slots, that simulates the player being able to point which dice to reroll exactly, even if realistically it doesn't matter as long as the dice has the same value.
+The DiceRollResult should receive some better treatment tho...
+Overall, with the knowledge I've gained over the years, I wouldn't be surprised if this turns into microservices and some DDD elements are applied :D
+
+Rules:
+https://howdoyouplayit.com/greed-rules-instructions-directions-for-the-greed-dice-game/
+
+Looking at the full set of rules (previously, I only implemented some rules, mostly for the rules engine), this is going to take a bit more time, looking forward to it.
