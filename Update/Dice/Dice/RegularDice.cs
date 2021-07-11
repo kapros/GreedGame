@@ -10,6 +10,6 @@ namespace Dice
     {
         public int MaxValue => 6;
 
-        public object MinValue { get; set; }
+        public int MinValue => 1;
     }
 }
