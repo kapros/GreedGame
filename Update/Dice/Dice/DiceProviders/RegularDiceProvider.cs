@@ -10,7 +10,7 @@ namespace Dice.DiceProviders
     {
         public IEnumerable<int> RollDice(int diceToReturn)
         {
-            return null;
+            return Enumerable.Repeat(1, diceToReturn);
         }
     }
 }
