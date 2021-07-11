@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dice.DiceTypes
 {
-    public enum RegularDiceResult
+    public enum RegularDieResult
     {
         One = 1,
         Two = 2,

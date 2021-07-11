@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dice.DiceTypes
 {
-    public abstract class Dice<T> : IDice<T>
+    public abstract class Die<T> : IDie<T>
     {
-        private Dice() { }
+        private Die() { }
 
-        protected Dice(T value) => Value = value;
+        protected Die(T value) => Value = value;
 
         public T Value { get; }
     }

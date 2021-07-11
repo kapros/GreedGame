@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Dice.DiceTypes
 {
-    public class RegularDice : Dice<RegularDiceResult>
+    public class RegularDie : Die<RegularDieResult>
     {
-        public RegularDice(RegularDiceResult result) : base(result)
+        public RegularDie(RegularDieResult result) : base(result)
         { }
 
-        public static RegularDice FromDiceRoll(RegularDiceResult result) => new(result);
+        public static RegularDie FromDiceRoll(RegularDieResult result) => new(result);
 
         public override bool Equals(object obj)
-            => obj is RegularDice other && other.Value.Equals(Value);
+            => obj is RegularDie other && other.Value.Equals(Value);
 
         public override int GetHashCode()
             => HashCode.Combine((int)Value, ToString());

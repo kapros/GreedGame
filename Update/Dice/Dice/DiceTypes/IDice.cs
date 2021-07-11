@@ -1,6 +1,6 @@
 ﻿namespace Dice.DiceTypes
 {
-    public interface IDice<T>
+    public interface IDie<T>
     {
         T Value { get; }
     }

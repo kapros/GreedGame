@@ -15,7 +15,7 @@ namespace Dice.Tests
         public void Min_value_is_1()
         {
             const int minValue = 1;
-            var minEnumValue = Enum.GetValues(typeof(RegularDiceResult)).Cast<RegularDiceResult>().Min();
+            var minEnumValue = Enum.GetValues(typeof(RegularDieResult)).Cast<RegularDieResult>().Min();
             minEnumValue.Should().Be(minValue);
         }
 
@@ -24,7 +24,7 @@ namespace Dice.Tests
         {
             const int maxValue = 6;
 
-            var maxEnumValue = Enum.GetValues(typeof(RegularDiceResult)).Cast<RegularDiceResult>().Max();
+            var maxEnumValue = Enum.GetValues(typeof(RegularDieResult)).Cast<RegularDieResult>().Max();
 
             maxEnumValue.Should().Be(maxValue);
         }
@@ -34,7 +34,7 @@ namespace Dice.Tests
         {
             const int value = 4;
 
-            var dice = RegularDice.FromDiceRoll(RegularDiceResult.Four);
+            var dice = RegularDie.FromDiceRoll(RegularDieResult.Four);
 
             dice.Value.Should().Be(value);
         }
@@ -42,10 +42,10 @@ namespace Dice.Tests
         [Fact]
         public void Is_not_equal_to_another_regular_die_with_different_value()
         {
-            const RegularDiceResult value = RegularDiceResult.Four;
+            const RegularDieResult value = RegularDieResult.Four;
 
-            var dice = RegularDice.FromDiceRoll(value);
-            var other = RegularDice.FromDiceRoll(RegularDiceResult.Three);
+            var dice = RegularDie.FromDiceRoll(value);
+            var other = RegularDie.FromDiceRoll(RegularDieResult.Three);
 
             dice.Equals(other).Should().BeFalse();
         }
@@ -53,10 +53,10 @@ namespace Dice.Tests
         [Fact]
         public void Is_not_equal_to_another_regular_die_with_same_value()
         {
-            const RegularDiceResult value = RegularDiceResult.Four;
+            const RegularDieResult value = RegularDieResult.Four;
 
-            var dice = RegularDice.FromDiceRoll(value);
-            var other = RegularDice.FromDiceRoll(value);
+            var dice = RegularDie.FromDiceRoll(value);
+            var other = RegularDie.FromDiceRoll(value);
 
             dice.Equals(other).Should().BeTrue();
         }
@@ -64,10 +64,10 @@ namespace Dice.Tests
         [Fact]
         public void Has_same_hash_code_for_same_value_objects()
         {
-            const RegularDiceResult value = RegularDiceResult.Four;
+            const RegularDieResult value = RegularDieResult.Four;
 
-            var dice = RegularDice.FromDiceRoll(value);
-            var other = RegularDice.FromDiceRoll(value);
+            var dice = RegularDie.FromDiceRoll(value);
+            var other = RegularDie.FromDiceRoll(value);
 
             dice.GetHashCode().Should().Be(other.GetHashCode());
         }
@@ -75,8 +75,8 @@ namespace Dice.Tests
         [Fact]
         public void Has_same_hash_code_for_different_value_objects()
         {
-            var dice = RegularDice.FromDiceRoll(RegularDiceResult.Four);
-            var other = RegularDice.FromDiceRoll(RegularDiceResult.One);
+            var dice = RegularDie.FromDiceRoll(RegularDieResult.Four);
+            var other = RegularDie.FromDiceRoll(RegularDieResult.One);
 
             dice.GetHashCode().Should().NotBe(other.GetHashCode());
         }
@@ -84,9 +84,9 @@ namespace Dice.Tests
         [Fact]
         public void Should_return_name_of_die_side()
         {
-            var dice = RegularDice.FromDiceRoll(RegularDiceResult.Four);
+            var dice = RegularDie.FromDiceRoll(RegularDieResult.Four);
 
-            dice.ToString().Should().Be(RegularDiceResult.Four.ToString());
+            dice.ToString().Should().Be(RegularDieResult.Four.ToString());
         }
     }
 }
